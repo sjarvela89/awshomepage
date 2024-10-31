@@ -1,10 +1,20 @@
-<div class="home-container">
-    <h1>Welcome to the Home Page</h1>
-    <p>Visit the following sections:</p>
-    <ul>
-      <li><button (click)="navigateToDog()">Dog</button></li>
-      <li><button (click)="navigateToPhotography()">Photography</button></li>
-      <li><button (click)="navigateToAuthor()">Author</button></li>
-      <li><button (click)="navigateToGuitar()">Guitar</button></li>
-    </ul>
-</div>
+<div class="background-container">
+    <!-- Background Image -->
+    <div class="background-image">
+      <img src="assets/images/background.jpg" alt="Background" class="background-img" />
+      <div class="overlay"></div>
+    </div>
+  
+    <!-- Background Component -->
+    
+  
+    <!-- Scrollable container for cards -->
+    <div class="container">
+      <div *ngFor="let card of cards" (click)="navigateTo(card.screen)" class="card-link">
+        <app-card-component
+          [title]="card.title"
+          [subtitle]="card.subtitle">
+        </app-card-component>
+      </div>
+    </div>
+  </div>

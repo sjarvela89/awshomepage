@@ -8,7 +8,6 @@ import { AuthorComponent } from './author/author.component';
 import { GuitarComponent } from './guitar/guitar.component';
 
 
-
 @NgModule({
   declarations: [AppComponent,
     HomeComponent,
